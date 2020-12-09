@@ -311,7 +311,8 @@ def start(index, secrets):
 
     if todaytime_data//60 <= LIMIT_TIME:
         addtime_data = qqreadaddtime(secrets[0], secrets[2])
-        if addtime_data['code'] == 0:
+        print(addtime_data)
+    if addtime_data['code'] == 0:
             tz += f"【阅读时长】成功上传{TIME}分钟\n"
 
     if DRAWAMOUNT != 0 and task_data['user']['amount'] >= DRAWAMOUNT*10000 and gettime().hour == 21:
